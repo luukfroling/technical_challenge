@@ -1,0 +1,22 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 1cc42c5b-3447-4429-8523-f43cc2eef52b
+  title: "Mainrun challenge"
+  # keywords: []
+  authors: [Luuk Fröling]
+  date: 2025-11-17
+  github: https://github.com/luukfroling/BEP
+  toc:
+    - file: Content\project.md
+    - file: Notebooks\Maincode_first_run.ipynb
+    - file: Notebooks\Maincode_Step_one.ipynb
+    - file: Notebooks\Maincode_Step_two.ipynb
+
+site:
+  # title: "Bachelor thesis Luuk Fröling"
+  # url: https://luukfroling.github.io/BEP/
+  # static:
+  #   - parts/Figures
+  #   - Figures
+  template: article-theme
