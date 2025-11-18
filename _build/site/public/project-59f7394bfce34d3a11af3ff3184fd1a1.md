@@ -1,8 +1,8 @@
-. 
 
 # Introduction
 
 Running train.py using my laptop would (according to my calculations) have taken about 3 days. Instead, I will be using google colab to run the notebook files, which I then download and place in the Notebooks folder of this project. All notebooks can be accessed under 'supporting documents'.
+
 
 This website is build using [Myst](https://mystmd.org/), which lets me write about changes I made to `train.py` in a structured way, combining code-cell outputs with markdown text. For any figure, a `source : ...` button will appear in the top right corner, clicking it will jump directly to the original notebook file.
 
@@ -33,7 +33,7 @@ The model's top-10 predicted next tokens are shown in [](#label_token_frequency_
 :label: label_token_frequency_first_run
 :::
 
-As seen in the figure, the model incorrectly predicts `<eos>` as the most probable token. In fact, the model predicts this token for every input I checked.
+As seen in the figure, the model incorrectly predicts `<eos>`. In fact, the model predicts this token for every input I checked.
 
 :::{figure} #token_frequency_input
 :label: label_token_frequency_input
@@ -112,9 +112,8 @@ This example also highlights the biggest issue I’ve encountered so far: no amo
 
 # Concluding thoughts 
 
-With a final validation loss of 1.25, I feel like I have reched the 80/20 point. Tweaking the optimiser, vocab size and implementing RoPe accounted for roughly 20% of the effort but delivered about 80% of the achievable gains. As shown in step 2, the model already performs well when we consider that it lacks important context, so other optimisations (like changing the architecture) would most likely result in little improvement to the loss.
-
-In line with Maincode's mission of building solutions that stand the test of time, I would instead recommend  focusing on providing more context rather than continuing to tune the existing architecture. One promising direction would be to include the article text itself, allowing the model to extract keywords (e.g., company names, locations, products) and general themes before predicting the title.
+With a final validation loss of 1.25, further improvements are likely to come from providing more context rather than continuing to tune the existing architecture. One promising direction would be to include the article text itself, allowing the model to extract keywords (e.g., company names, locations, products) and general themes before predicting the title.
 
 This additional information would address the core limitation revealed in the examples: the model often lacks the semantic clues needed to make the “correct” next-token prediction, because that information is nowhere in its current input. Adding this additional context will most likely improve the loss significantly more than small optimisations inside the current pipeline. 
 
+Unfortunately, the rules of the challenge don’t allow adding the article text or modifying the dataset, so I couldn’t explore this direction here.
