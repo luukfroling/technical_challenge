@@ -8,10 +8,10 @@ project:
   date: 2025-11-17
   github: https://github.com/luukfroling/BEP
   toc:
-    - file: Content\project.md
-    - file: Notebooks\Maincode_first_run.ipynb
-    - file: Notebooks\Maincode_Step_one.ipynb
-    - file: Notebooks\Maincode_Step_two.ipynb
+    - file: Content/project.md
+    - file: Notebooks/Maincode_first_run.ipynb
+    - file: Notebooks/Maincode_Step_one.ipynb
+    - file: Notebooks/Maincode_Step_two.ipynb
 
 site:
   # title: "Bachelor thesis Luuk Fröling"
